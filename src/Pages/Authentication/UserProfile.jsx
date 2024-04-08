@@ -1,22 +1,54 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../Auth Provider/AuthProvider";
 import Navbar from "../../Shared Component/Navbar";
 import { IoCameraReverseOutline } from "react-icons/io5";
 import { update } from "firebase/database";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from 'react-router-dom';
 
 const UserProfile = () => {
+    const [errorMsg, setErrorMsg] = useState(null)
+    const [successMsg, setSuccessMsg] = useState(null)
+    const navigate = useNavigate();
 
-    const { user } = useContext(AuthContext);
+
+    const { user, updateUserProfile } = useContext(AuthContext);
     console.log(user);
 
-const updateProfileHandel =()=>{
+    const updateProfileHandel = (e) => {
+        setErrorMsg('')
+        setSuccessMsg('')
 
-    
-}
+        e.preventDefault();
+        const data = new FormData(e.target);
+        const photo = data.get('photo')
+        if(photo.length===0){
+            setErrorMsg('Please Provide URL')
+            return
+
+        }
+
+        updateUserProfile(photo)
+            .then(() => {
+
+                toast.success('Photo Updated successfully ')
+                setSuccessMsg('Photo Updated successfully')
+                
+                e.target.reset()
+
+                setTimeout(() => { navigate('/userProfile'); document.getElementById('my_modal_5').close() }, 1500)
+            })
+
+            .catch((error) => {
+                const errorMessage = error.message;
+                setErrorMsg(errorMessage)
+
+            });
+    }
 
 
-    
+
     return (
         <div>
             <Navbar></Navbar>
@@ -51,27 +83,30 @@ const updateProfileHandel =()=>{
 
                             <div className="p-4 flex  flex-col">
                                 <label htmlFor="photo" className=" font-semibold p-1">Your Photo URL</label>
-                                <input className="p-2 border-2 rounded-md" type="text" name="photo" id="photo" placeholder="Your Photo URL" />
+                                <input  className="p-2 border-2 rounded-md" type="text" name="photo" id="photo" placeholder="Your Photo URL" />
                             </div>
 
                             <div className="p-4 flex  flex-col">
-                                <p className="text-red-400"> </p>
-                                <p className="text-green-400"> </p>
-                                <input className="btn bg-[#bcc72a] rounded-sm w-full font-bold mt-3" type="submit" value="Update Profile" />
+                                <p className="text-red-400">{errorMsg} </p>
+                                <p className="text-green-400"> {successMsg}</p>
+                                    <input method="dialog" className="btn bg-[#bcc72a] rounded-sm w-full font-bold mt-3" type="submit" value="Update Profile" />
+                               
+                            </div>
+
+                            <div className="modal-action">
+                                <form method="dialog">
+                                    <button className="btn">Close</button>
+                                </form>
                             </div>
                         </form>
 
 
-                        <div className="modal-action">
-                            <form method="dialog">
-                                {/* if there is a button in form, it will close the modal */}
-                                <button className="btn">Close</button>
-                            </form>
-                        </div>
+
                     </div>
                 </dialog>
 
             </div>
+            <ToastContainer />
         </div>
     );
 };
