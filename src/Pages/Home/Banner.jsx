@@ -19,7 +19,7 @@ const Banner = () => {
     };
 
     return (
-        <div className=' relative bg-gradient-to-br from-black to-gray-900'>
+        <div className=' relative bg-gradient-to-br from-black to-gray-900 mb-10'>
  
             <div className="absolute top-0 right-0 z-10 w-full "> <Navbar ></Navbar></div>
             <Swiper

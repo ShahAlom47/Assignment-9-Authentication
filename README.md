@@ -9,4 +9,4 @@ Currently, two official plugins are available:
 
 
 1.react icon
-2.
+2. react-toastify
