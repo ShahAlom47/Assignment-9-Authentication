@@ -13,7 +13,7 @@ const Navbar = () => {
         <NavLink to={'/'}><li><a>Home</a></li></NavLink>
         <NavLink><li><a>About</a></li></NavLink>
         <NavLink><li><a>Blog</a></li></NavLink>
-        <NavLink to={"/userProfile"} ><li><a>Contact</a></li></NavLink>
+        <NavLink to={'/'} ><li><a>Contact</a></li></NavLink>
     </>
 
     const userLogOutHandel =()=>{
@@ -24,7 +24,6 @@ const Navbar = () => {
     }
 
 
-user&& console.log(user.photoURL);
    
 
     return (
@@ -61,12 +60,12 @@ user&& console.log(user.photoURL);
                         </div>
                     </div>
                     <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
-                        <li>
+                      <Link to={"/userProfile"}>    <li>
                             <a className="justify-between">
                                 Profile
                                 <span className="badge">{user.displayName}</span>
                             </a>
-                        </li>
+                        </li></Link>
                         <li><a>Settings</a></li>
                         <li onClick={userLogOutHandel} ><a>Logout</a></li>
                     </ul>
