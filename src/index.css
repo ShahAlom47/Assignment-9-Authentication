@@ -1,6 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-body{
-   
+
+
+.bannerBtn:hover {
+    background-color: #c7d50f;
+
+}
+
+.bannerBtn:active{
+
+    transform: scale(0.96);
+    
 }

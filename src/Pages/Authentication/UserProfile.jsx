@@ -95,6 +95,10 @@ const UserProfile = () => {
         <div>
             <Navbar></Navbar>
             <div>
+
+              
+
+
                 <h1 className=" text-2xl text-center py-4 border-b-2">Your Profile</h1>
                 <div className="lg:w-6/12 m-auto border-4 my-5 p-4 rounded-md">
                     <div className=" flex justify-center pb-5">

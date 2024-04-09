@@ -6,11 +6,13 @@ import Login from "../Pages/Authentication/Login";
 import PrivetRoute from "./Privet Routes/PrivetRoute";
 import UserProfile from "../Pages/Authentication/UserProfile";
 import CardDetails from "../Pages/Details/CardDetails";
+import ErrorPage from "../Pages/ErrorPage";
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <Root></Root>,
+      errorElement: <ErrorPage />,
       children: [
         {
           path: "/",

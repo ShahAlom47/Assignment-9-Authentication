@@ -21,7 +21,7 @@ const Banner = () => {
     return (
         <div className=' relative bg-gradient-to-br from-black to-gray-900 mb-10'>
  
-            <div className="absolute top-0 right-0 z-10 w-full "> <Navbar ></Navbar></div>
+            <div className=" md:absolute lg:absolute top-0 right-0 z-10 w-full "> <Navbar ></Navbar></div>
             <Swiper
 
                 spaceBetween={30}
@@ -41,26 +41,26 @@ const Banner = () => {
             >
                 <SwiperSlide><div className='relative '>
                     <img className=' w-full rounded-lg' src="https://i.ibb.co/S6mPm5m/banner1.png" alt="" />
-                    <div className=" bg-[#18171786] absolute bottom-5 left-5 z-40 p-10 rounded-md  animate__animated animate__fadeInLeft">
-                        <h1 className='text-5xl mb-2 text-gray-100 '>Cozy Vacation Rental</h1>
+                    <div className=" bg-[#18171786] absolute bottom-1 md:bottom-5 lg:bottom-5 left-5 z-40 lg:p-10 p-2 rounded-md  animate__animated animate__fadeInLeft">
+                        <h1 className='lg:text-5xl text-2xl mb-2 text-gray-100 '>Cozy Vacation Rental</h1>
                         <p className='text-gray-300 '>Contemporary townhouse in a vibrant urban community with easy access to amenities.</p>
-                        <button className='btn  rounded-full p-4 font-bold my-5 border-none bg-[#bcc72a]'>View Gallery</button>
+                        <button className=' bannerBtn  p- px-3 rounded-full lg:p-3 font-bold mt-2 lg:my-5 border-none bg-[#bcc72a]'>View Gallery</button>
                     </div>
                 </div></SwiperSlide>
                 <SwiperSlide>
                     <img className='-[500px] w-full rounded-lg' src="https://i.ibb.co/PDnJV0T/banner2.png" alt="" />
-                    <div className=" bg-[#18171786] absolute bottom-5 left-5 z-40 p-10 rounded-md  animate__animated animate__fadeInLeft">
-                        <h1 className='text-5xl mb-2 text-gray-100 '>Senior Living Community</h1>
+                    <div className=" bg-[#18171786] absolute md:bottom-5 lg:bottom-5 bottom-1 left-5 z-40 lg:p-10 p-2 rounded-md  animate__animated animate__fadeInLeft">
+                        <h1 className='lg:text-5xl text-2xl mb-2 text-gray-100 '>Senior Living Community</h1>
                         <p className='text-gray-300 '>Luxury apartment complex offering stunning views and upscale amenities.</p>
-                        <button className='btn  rounded-full p-4 font-bold my-5 border-none bg-[#bcc72a]'>View Gallery</button>
+                        <button className= ' bannerBtn p- px-3 rounded-full lg:p-3 font-bold mt-2 lg:my-5 border-none bg-[#bcc72a]'>View Gallery</button>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <img className='-[500px] w-full rounded-lg' src="https://i.ibb.co/Z1cDYh0/banner3.png" alt="" />
-                    <div className=" bg-[#18171786] absolute bottom-5 left-5 z-40 p-10 rounded-md  animate__animated animate__fadeInLeft">
-                        <h1 className='text-5xl mb-2 text-gray-100 '>Luxurious Apartment </h1>
+                    <div className=" bg-[#18171786] absolute md:bottom-5 lg:bottom-5 bottom-1 left-5 z-40 lg:p-10 p-2 rounded-md  animate__animated animate__fadeInLeft">
+                        <h1 className='lg:text-5xl text-2xl mb-2 text-gray-100 '>Luxurious Apartment </h1>
                         <p className='text-gray-300 '>Retirement community offering care and amenities for senior residents.</p>
-                        <button className='btn  rounded-full p-4 font-bold my-5 border-none bg-[#bcc72a]'>View Gallery</button>
+                        <button className=' bannerBtn p- px-3 rounded-full lg:p-3 font-bold mt-2 lg:my-5 border-none bg-[#bcc72a]'>View Gallery</button>
                     </div>
 
                 </SwiperSlide>

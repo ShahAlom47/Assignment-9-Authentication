@@ -13,37 +13,42 @@ import { GithubAuthProvider } from "firebase/auth";
 export const AuthContext= createContext(null);
 
 const AuthProvider = ({children}) => {
-    // const [loading, setLoading]=useState(true)
+    const [loading, setLoading]=useState(true)
     const [user, setUser] = useState(12345);
     const googleProvider = new GoogleAuthProvider();
     const gitHubProvider = new GithubAuthProvider();
-
+          
     const userRegister=(email,password)=>{
-
+        setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password)
     }
     const userLogin=(email,password)=>{
-
+        setLoading(true);
         return signInWithEmailAndPassword(auth, email, password)
     }
     const googleLogin=()=>{
+        setLoading(true);
         return signInWithPopup(auth, googleProvider)
     }
 
     const githubLogin=()=>{
+        setLoading(true);
   return signInWithPopup(auth, gitHubProvider)
     }
 
 
     const userLogOut=()=>{
+        setLoading(true);
         return signOut(auth)
     }
 
     const updateUserProfile=(ProfileUrl)=>{
+        setLoading(true);
        return updateProfile(auth.currentUser, {photoURL: ProfileUrl })
 
     }
     const updateUserName=(displayName)=>{
+        setLoading(true);
         return updateProfile(auth.currentUser, {displayName:displayName  })
 
     }
@@ -51,6 +56,7 @@ const AuthProvider = ({children}) => {
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
             setUser(currentUser);
+            setLoading(false);
         });
         return () => unSubscribe
     }, [])

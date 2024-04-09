@@ -13,6 +13,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { ImGoogle } from "react-icons/im";
 import { IoLogoGithub } from "react-icons/io5";
+import { useLocation } from 'react-router-dom';
+
 
 
 
@@ -23,6 +25,7 @@ const Register = () => {
     const [passError, setPassError]=useState(null)
     const [showPass,setShowPass]=useState(false)
     const navigate = useNavigate();
+    const location = useLocation();
     
 
     const {  githubLogin,googleLogin, userRegister } = useContext(AuthContext);
@@ -47,15 +50,15 @@ const Register = () => {
       
    
        if (password.length<6) {
-            setErrorMsg('Password should be must 6 character or long')
+            setErrorMsg('Password must be 6 characters or longer')
             return
         }
       else  if (!/[A-Z]/.test(password)) {
-            setErrorMsg('use a upper case letter')
+            setErrorMsg('Use an uppercase letter')
             return
         }
       else  if (!/[a-z]/.test(password)) {
-            setErrorMsg('use a Lowercase letter')
+            setErrorMsg('Use an lowercase letter')
             return
         }
      
@@ -142,7 +145,8 @@ const Register = () => {
                        <div className="relative">
                        <input className="p-2 border-t-2 w-full" type={showPass?'password':'text'} name="password" id="password" placeholder="Your Password" />
                         <h5 onClick={()=>setShowPass(!showPass)} className="font-semibold absolute top-4 right-5">{showPass?<FaEye />:<FaEyeSlash />} </h5>
-                        </div>                   
+                        </div>   
+                        <p className="text-red-500">{passError}</p>                
                     </div>
 
                   
