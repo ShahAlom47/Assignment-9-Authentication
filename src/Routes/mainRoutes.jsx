@@ -3,7 +3,7 @@ import Root from "../Layout/Root";
 import Home from "../Pages/Home/Home";
 import Register from "../Pages/Authentication/Register";
 import Login from "../Pages/Authentication/Login";
-import PrivetRoute from "./PrivetRoute";
+import PrivetRoute from "./Privet Routes/PrivetRoute";
 import UserProfile from "../Pages/Authentication/UserProfile";
 
 const router = createBrowserRouter([

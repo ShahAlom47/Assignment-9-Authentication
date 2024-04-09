@@ -4,6 +4,7 @@ import { IoHomeOutline } from "react-icons/io5";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Auth Provider/AuthProvider";
 import { FaRegCircleUser } from "react-icons/fa6";
+import { updateProfile } from "firebase/auth";
 const Navbar = () => {
     const { user,userLogOut } = useContext(AuthContext);
 
@@ -11,7 +12,7 @@ const Navbar = () => {
 
     const navi = <>
         <NavLink to={'/'}><li><a>Home</a></li></NavLink>
-        <NavLink><li><a>About</a></li></NavLink>
+        <NavLink to={'/userProfile'}><li><a>Update Profile</a></li></NavLink>
         <NavLink><li><a>Blog</a></li></NavLink>
         <NavLink to={'/'} ><li><a>Contact</a></li></NavLink>
     </>
@@ -23,6 +24,7 @@ const Navbar = () => {
 
     }
 
+    console.log(user);
 
    
 
@@ -63,7 +65,7 @@ const Navbar = () => {
                       <Link to={"/userProfile"}>    <li>
                             <a className="justify-between">
                                 Profile
-                                <span className="badge">{user.displayName}</span>
+                                <span className="badge font-semibold  ">{user.displayName}</span>
                             </a>
                         </li></Link>
                         <li><a>Settings</a></li>

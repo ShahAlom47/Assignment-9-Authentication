@@ -11,6 +11,8 @@ import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa6";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { ImGoogle } from "react-icons/im";
+import { IoLogoGithub } from "react-icons/io5";
 
 
 
@@ -23,7 +25,7 @@ const Register = () => {
     const navigate = useNavigate();
     
 
-    const { googleLogIn, userRegister } = useContext(AuthContext);
+    const {  githubLogin,googleLogin, userRegister } = useContext(AuthContext);
 
 
 
@@ -86,8 +88,20 @@ const Register = () => {
 
     }
 
-    const googleLogin = () => {
-        googleLogIn()
+    const googleLoginHandel = () => {
+        googleLogin()
+        .then(()=>{
+            navigate(location.state? location.state:'/')
+        })
+            .catch((error) => {
+                const errorMessage = error.message;
+                console.log(errorMessage);
+            });
+
+
+    }
+    const githubLoginHandel = () => {
+        githubLogin()
         .then(()=>{
             navigate(location.state? location.state:'/')
         })
@@ -158,17 +172,9 @@ const Register = () => {
                 <p className=' relative -top-3 left-1/2 font-semibold p-1 border-2  border-gray-600 bg-slate-100 rounded-lg inline'>OR</p>
             </div>
 
-            <div className="w-6/12 m-auto px-6 mb-10 ">
-
-                <div className="flex items-center gap-3  border-2 rounded-full p-2 mb-4">
-                    <img className=" w-10 h-10 rounded-full" src='' alt="" />
-                    <p className=" font-semibold text-center">Continue With Facebook</p>
-                </div>
-                <div onClick={googleLogin} className="flex items-center gap-3  border-2 rounded-full p-2">
-                    <img className=" w-10 h-10 rounded-full" src='' alt="" />
-                    <p className=" font-semibold text-center">Continue With Google</p>
-                </div>
-
+            <div className="w-6/12 m-auto px-6 mb-10 flex flex-col gap-3 ">   
+                <button onClick={googleLoginHandel} className="btn btn-outline px-2 rounded-full"> <ImGoogle className=" text-red-500  w-6 h-6" /> Continue With Google </button>
+                <button onClick={githubLoginHandel} className="btn btn-outline px-2 rounded-full"> <IoLogoGithub className="  w-8 h-8" /> Continue With Google </button>
             </div>
          
             <ToastContainer />

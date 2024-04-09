@@ -1,74 +1,74 @@
 [
-    {
-      "id": 1,
-      "estate_title": "Beautiful Single-Family Home",
-      "segment_name": "Single-family homes",
-      "description": "Spacious single-family home with a large backyard and modern amenities.",
-      "price": "$500,000",
-      "status": "sale",
-      "area": "2500 sq ft",
-      "location": "Suburban neighborhood, City Name",
-      "facilities": ["3 bedrooms", "2 bathrooms", "Attached garage", "Backyard patio"],
-      "image": "single_family_home_image.jpg"
-    },
-    {
-      "id": 2,
-      "estate_title": "Modern Townhouse",
-      "segment_name": "Townhouses",
-      "description": "Contemporary townhouse in a vibrant urban community with easy access to amenities.",
-      "price": "$300,000",
-      "status": "sale",
-      "area": "1800 sq ft",
-      "location": "Downtown area, City Name",
-      "facilities": ["Open floor plan", "Private balcony", "Community gym"],
-      "image": "townhouse_image.jpg"
-    },
-    {
-      "id": 3,
-      "estate_title": "Luxurious Apartment",
-      "segment_name": "Apartments",
-      "description": "Luxury apartment complex offering stunning views and upscale amenities.",
-      "price": "$2,000/month",
-      "status": "rent",
-      "area": "1200 sq ft",
-      "location": "City center, City Name",
-      "facilities": ["Swimming pool", "Fitness center", "24/7 security"],
-      "image": "apartment_image.jpg"
-    },
-    {
-      "id": 4,
-      "estate_title": "Student Housing",
-      "segment_name": "Student housing",
-      "description": "Convenient student housing near campus with modern furnishings and study areas.",
-      "price": "$800/month per room",
-      "status": "rent",
-      "area": "800 sq ft per room",
-      "location": "Near University, City Name",
-      "facilities": ["Furnished rooms", "Study lounges", "Laundry facilities"],
-      "image": "student_housing_image.jpg"
-    },
-    {
-      "id": 5,
-      "estate_title": "Senior Living Community",
-      "segment_name": "Senior living communities",
-      "description": "Retirement community offering care and amenities for senior residents.",
-      "price": "$3,500/month",
-      "status": "rent",
-      "area": "Varies",
-      "location": "Peaceful suburb, City Name",
-      "facilities": ["Assisted living options", "Recreational activities", "Gardens"],
-      "image": "senior_living_image.jpg"
-    },
-    {
-      "id": 6,
-      "estate_title": "Cozy Vacation Rental",
-      "segment_name": "Vacation rentals",
-      "description": "Charming vacation rental perfect for a getaway, located near beaches and attractions.",
-      "price": "$200/night",
-      "status": "rent",
-      "area": "1000 sq ft",
-      "location": "Coastal area, City Name",
-      "facilities": ["Ocean view", "Outdoor dining area", "WiFi"],
-      "image": "vacation_rental_image.jpg"
-    }
-  ]
+  {
+    "id": 1,
+    "estate_title": "Beautiful Single-Family Home",
+    "segment_name": "Single-family homes",
+    "description": "Spacious single-family home with a large backyard and modern amenities.",
+    "price": "$500,000",
+    "status": "sale",
+    "area": "2500 sq ft",
+    "location": "Suburban neighborhood, New York",
+    "facilities": ["3 bedrooms", "2 bathrooms", "Attached garage", "Backyard patio"],
+    "image": "https://i.ibb.co/dMqQVpT/card2.png"
+  },
+  {
+    "id": 2,
+    "estate_title": "Modern Townhouse",
+    "segment_name": "Townhouses",
+    "description": "Contemporary townhouse in a vibrant urban community with easy access to amenities.",
+    "price": "$300,000",
+    "status": "sale",
+    "area": "1800 sq ft",
+    "location": "Downtown area, Los Angeles",
+    "facilities": ["Open floor plan", "Private balcony", "Community gym"],
+    "image": "https://i.ibb.co/2PC5Rnh/card4.png"
+  },
+  {
+    "id": 3,
+    "estate_title": "Luxurious Apartment",
+    "segment_name": "Apartments",
+    "description": "Luxury apartment complex offering stunning views and upscale amenities.",
+    "price": "$2,000/month",
+    "status": "rent",
+    "area": "1200 sq ft",
+    "location": "City center, Chicago",
+    "facilities": ["Swimming pool", "Fitness center", "24/7 security"],
+    "image": "https://i.ibb.co/qCKC5L5/card-1.png"
+  },
+  {
+    "id": 4,
+    "estate_title": "Student Housing",
+    "segment_name": "Student housing",
+    "description": "Convenient student housing near campus with modern furnishings and study areas.",
+    "price": "$800/month per room",
+    "status": "rent",
+    "area": "800 sq ft per room",
+    "location": "Near University, Boston",
+    "facilities": ["Furnished rooms", "Study lounges", "Laundry facilities"],
+    "image": "https://i.ibb.co/K9F0nWf/card-5.png"
+  },
+  {
+    "id": 5,
+    "estate_title": "Senior Living Community",
+    "segment_name": "Senior living communities",
+    "description": "Retirement community offering care and amenities for senior residents.",
+    "price": "$3,500/month",
+    "status": "rent",
+    "area": "Varies",
+    "location": "Peaceful suburb, San Francisco",
+    "facilities": ["Assisted living options", "Recreational activities", "Gardens"],
+    "image": "https://i.ibb.co/hRmY35P/card3.png"
+  },
+  {
+    "id": 6,
+    "estate_title": "Cozy Vacation Rental",
+    "segment_name": "Vacation rentals",
+    "description": "Charming vacation rental perfect for a getaway, located near beaches and attractions.",
+    "price": "$200/night",
+    "status": "rent",
+    "area": "1000 sq ft",
+    "location": "Coastal area, Miami",
+    "facilities": ["Ocean view", "Outdoor dining area", "WiFi"],
+    "image": "https://i.ibb.co/CJyP3NJ/card-6-1.png"
+  }
+]
