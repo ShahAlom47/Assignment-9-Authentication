@@ -5,6 +5,7 @@ import Register from "../Pages/Authentication/Register";
 import Login from "../Pages/Authentication/Login";
 import PrivetRoute from "./Privet Routes/PrivetRoute";
 import UserProfile from "../Pages/Authentication/UserProfile";
+import CardDetails from "../Pages/Details/CardDetails";
 
 const router = createBrowserRouter([
     {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
         {
           path: "/userProfile",
           element: <PrivetRoute> <UserProfile></UserProfile></PrivetRoute>,
+        },
+        {
+          path: "/estateDetails/:id",
+          element: <PrivetRoute> <CardDetails></CardDetails></PrivetRoute>,
         },
       ],
     },
