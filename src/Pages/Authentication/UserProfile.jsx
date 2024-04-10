@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
 import { FaRegCircleUser } from "react-icons/fa6";
 import { LuPenSquare } from "react-icons/lu";
+import { Helmet} from 'react-helmet-async';
 
 const UserProfile = () => {
     const [errorMsg, setErrorMsg] = useState(null)
@@ -93,10 +94,10 @@ const UserProfile = () => {
     return (
         <div>
             <Navbar></Navbar>
+            <Helmet>
+                <title>Dream House/update/profile</title>
+            </Helmet>
             <div>
-
-              
-
 
                 <h1 className=" text-2xl text-center py-4 border-b-2">Your Profile</h1>
                 <div className="lg:w-6/12 m-auto border-4 my-5 p-4 rounded-md">

@@ -1,5 +1,6 @@
 import { useRouteError } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from 'react-helmet-async';
 
 export default function ErrorPage() {
   const error = useRouteError();
@@ -8,6 +9,10 @@ export default function ErrorPage() {
 
   return (
     <div id="error-page" className=" my-10 flex flex-col justify-center">
+      <Helmet>
+        <title>Dream House/error</title>
+      </Helmet>
+
       <div className=" w-6/12 lg:w-3/12 m-auto">
         <img src="https://i.ibb.co/GWZW5T8/8030432-3828541.jpg" alt="" />
       </div>

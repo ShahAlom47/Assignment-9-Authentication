@@ -39,7 +39,7 @@ const Navbar = () => {
                         {navi}
                     </ul>
                 </div>
-                <a className="btn btn-ghost pl-0 font-bold text-gray-100 text-xl md:text-2xl lg:text-2xl"><IoHomeOutline />Dream <span className="text-[#bcc72a]">House</span></a>
+             <Link to={'/'}>  <button className="btn btn-ghost pl-0 font-bold text-gray-100 text-xl md:text-2xl lg:text-2xl"><IoHomeOutline />Dream <span className="text-[#bcc72a]">House</span></button> </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 font-semibold text-gray-100">
@@ -52,7 +52,7 @@ const Navbar = () => {
 
 
                 {
-                    user ? <div className="dropdown dropdown-end">
+                    user ? <div title={user.displayName} className="dropdown dropdown-end">
                         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                             <div className="w-10 rounded-full ">
                                 {

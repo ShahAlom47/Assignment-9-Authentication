@@ -14,6 +14,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { ImGoogle } from "react-icons/im";
 import { IoLogoGithub } from "react-icons/io5";
 import { useLocation } from 'react-router-dom';
+import { Helmet} from 'react-helmet-async';
 
 
 
@@ -22,46 +23,46 @@ import { useLocation } from 'react-router-dom';
 const Register = () => {
     const [errorMsg, setErrorMsg] = useState(null)
     const [successMsg, setSuccessMsg] = useState(null)
-    const [passError, setPassError]=useState(null)
-    const [showPass,setShowPass]=useState(false)
+    const [passError, setPassError] = useState(null)
+    const [showPass, setShowPass] = useState(false)
     const navigate = useNavigate();
     const location = useLocation();
-    
 
-    const {  githubLogin,googleLogin, userRegister } = useContext(AuthContext);
+
+    const { githubLogin, googleLogin, userRegister } = useContext(AuthContext);
 
 
 
     const registerHandel = (e) => {
-          // reset msg 
-          setErrorMsg('')
-          setSuccessMsg('')
-          setPassError('')
-          
+        // reset msg 
+        setErrorMsg('')
+        setSuccessMsg('')
+        setPassError('')
+
         e.preventDefault();
         const data = new FormData(e.target);
         const email = data.get('email')
         const name = data.get('name')
         const photo = data.get('photo')
         const password = data.get('password')
-      
+
         console.log(photo);
-        
-      
-   
-       if (password.length<6) {
+
+
+
+        if (password.length < 6) {
             setErrorMsg('Password must be 6 characters or longer')
             return
         }
-      else  if (!/[A-Z]/.test(password)) {
+        else if (!/[A-Z]/.test(password)) {
             setErrorMsg('Use an uppercase letter')
             return
         }
-      else  if (!/[a-z]/.test(password)) {
+        else if (!/[a-z]/.test(password)) {
             setErrorMsg('Use an lowercase letter')
             return
         }
-     
+
 
 
 
@@ -74,11 +75,11 @@ const Register = () => {
                         const errorMessage = error.message;
                         setErrorMsg(errorMessage)
                     });
-               
-                    toast.success('User created successfully ')
+
+                toast.success('User created successfully ')
                 setSuccessMsg('User created successfully')
 
-                setTimeout(()=>{ navigate(location.state? location.state:'/')},1500)
+                setTimeout(() => { navigate(location.state ? location.state : '/') }, 1500)
             })
             .catch((error) => {
                 const errorMessage = error.message;
@@ -93,9 +94,9 @@ const Register = () => {
 
     const googleLoginHandel = () => {
         googleLogin()
-        .then(()=>{
-            navigate(location.state? location.state:'/')
-        })
+            .then(() => {
+                navigate(location.state ? location.state : '/')
+            })
             .catch((error) => {
                 const errorMessage = error.message;
                 console.log(errorMessage);
@@ -105,9 +106,9 @@ const Register = () => {
     }
     const githubLoginHandel = () => {
         githubLogin()
-        .then(()=>{
-            navigate(location.state? location.state:'/')
-        })
+            .then(() => {
+                navigate(location.state ? location.state : '/')
+            })
             .catch((error) => {
                 const errorMessage = error.message;
                 console.log(errorMessage);
@@ -120,7 +121,9 @@ const Register = () => {
     return (
         <div className="bg-white min-h-screen">
             <Navbar color={'text-gray-500'}></Navbar>
- 
+            <Helmet>
+                <title>Dream House/register</title>
+            </Helmet>
 
             <div className=" lg:w-6/12 w-10/12 m-auto border-2 rounded-xl mt-9 p-8">
 
@@ -142,17 +145,17 @@ const Register = () => {
                     </div>
                     <div className="p-4 flex  flex-col">
                         <label htmlFor="password" className=" font-bold p-1">Password</label>
-                       <div className="relative">
-                       <input className="p-2 border-t-2 w-full" type={showPass?'password':'text'} name="password" id="password" placeholder="Your Password" />
-                        <h5 onClick={()=>setShowPass(!showPass)} className="font-semibold absolute top-4 right-5">{showPass?<FaEye />:<FaEyeSlash />} </h5>
-                        </div>   
-                        <p className="text-red-500">{passError}</p>                
+                        <div className="relative">
+                            <input className="p-2 border-t-2 w-full" type={showPass ? 'password' : 'text'} name="password" id="password" placeholder="Your Password" />
+                            <h5 onClick={() => setShowPass(!showPass)} className="font-semibold absolute top-4 right-5">{showPass ? <FaEye /> : <FaEyeSlash />} </h5>
+                        </div>
+                        <p className="text-red-500">{passError}</p>
                     </div>
 
-                  
 
-                   
-                   
+
+
+
 
                     <div className="p-4 flex  flex-col">
                         <p className="text-red-400">{errorMsg} </p>
@@ -176,11 +179,11 @@ const Register = () => {
                 <p className=' relative -top-3 left-1/2 font-semibold p-1 border-2  border-gray-600 bg-slate-100 rounded-lg inline'>OR</p>
             </div>
 
-            <div className="w-6/12 m-auto px-6 mb-10 flex flex-col gap-3 ">   
+            <div className="w-6/12 m-auto px-6 mb-10 flex flex-col gap-3 ">
                 <button onClick={googleLoginHandel} className="btn btn-outline px-2 rounded-full"> <ImGoogle className=" text-red-500  w-6 h-6" /> Continue With Google </button>
                 <button onClick={githubLoginHandel} className="btn btn-outline px-2 rounded-full"> <IoLogoGithub className="  w-8 h-8" /> Continue With Google </button>
             </div>
-         
+
             <ToastContainer />
 
         </div>
