@@ -2,26 +2,38 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../../Shared Component/Navbar';
-import { MdOutlineAreaChart } from 'react-icons/md';
+import { MdOutlineAreaChart, MdOutlineDelete } from 'react-icons/md';
 import { CiLocationOn } from 'react-icons/ci';
 import 'animate.css';
 
 const Bookmarks = () => {
  
     const [datas, setDatas] = useState([]);
+    const [localDatas,setLocalDatas]=useState([])
   
     useEffect(() => {
         fetch('../data.json')
             .then((res) => res.json())
             .then(homeData => setDatas(homeData))
-    }, [])
+    }, [localDatas])
+
 
 
     // local storage start 
     const xx = localStorage.getItem('bookMark')
     const localData = xx ? JSON.parse(localStorage.getItem('bookMark')) : [];
-
     const bookMarkData = datas.filter(item => localData.includes(item.id))
+
+
+    const deleteItemHandel=(id)=>{
+        
+            const updateData = localData.filter(item =>item!== id)
+
+            localStorage.setItem('bookMark',JSON.stringify([...updateData]))
+            console.log(localData,updateData);
+            setLocalDatas([...updateData]);
+             
+    }
 
     return (
         <div>
@@ -40,6 +52,7 @@ const Bookmarks = () => {
                                         <p className=' text-l font-semibold text-gray-700 flex gap-1 items-center'> <CiLocationOn /> Locattion : {data?.location} </p>
                                         <div className="card-actions justify-start">
                                             <Link to={`/estateDetails/${data?.id}`}>  <button className='btn  rounded-md p-4 font-bold my-5 border-none bg-[#bcc72a]'>View Property</button></Link>
+                                              <button onClick={()=>deleteItemHandel(data?.id)} className='btn  rounded-md font-bold my-5 border-none text-3xl '><MdOutlineDelete /></button>
                                         </div>
                                     </div>
                                 </div>

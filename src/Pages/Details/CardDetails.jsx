@@ -32,6 +32,7 @@ const CardDetails = () => {
     useEffect(()=>{
    
         const localData= localStorage.getItem('bookMark') ?JSON.parse(localStorage.getItem('bookMark')) : [];
+
         const bookMData = localData.some(item=>item.id===IntId);
         console.log(bookMData);
         isBooked?setBooked(true):setBooked(false);
