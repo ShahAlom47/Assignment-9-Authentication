@@ -1,24 +1,19 @@
 
 import { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import { useNavigate } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import Navbar from '../../Shared Component/Navbar';
 import { MdOutlineAreaChart } from 'react-icons/md';
 import { CiLocationOn } from 'react-icons/ci';
+import 'animate.css';
 
 const Bookmarks = () => {
-    const { id } = useParams();
-    const IntId = parseInt(id)
+ 
     const [datas, setDatas] = useState([]);
-    const [loading, setLoading] = useState(true)
-    const navigate = useNavigate();
-
+  
     useEffect(() => {
         fetch('../data.json')
             .then((res) => res.json())
             .then(homeData => setDatas(homeData))
-        setLoading(false)
-
     }, [])
 
 
@@ -28,19 +23,16 @@ const Bookmarks = () => {
 
     const bookMarkData = datas.filter(item => localData.includes(item.id))
 
-    console.log(bookMarkData);
-
     return (
         <div>
-
             <Navbar></Navbar>
             <div>
                 <h1 className=" text-2xl font-bold text-center px-6 py-2 my-8  border-b-2"> Bookmark List  </h1>
-                <div className='border-2 rounded-md p-5 my-4'>
+                <div className='border-2 rounded-md p-5 my-4 space-y-3'>
                     {
                         bookMarkData.map(data => <>
                             {
-                                <div className="card card-compact w-8/12 m-auto bg-base-100 shadow-xl flex flex-row justify-start">
+                                <div className="card card-compact w-8/12 m-auto bg-base-100 shadow-xl flex flex-row justify-start  animate__animated animate__fadeInRight">
                                     <figure className='rounded-xl w-6/12'><img className='rounded-xl ' src={data.image} alt="Shoes" /></figure>
                                     <div className="card-body">
                                         <h2 className="card-title">{data?.estate_title}</h2>
@@ -54,7 +46,6 @@ const Bookmarks = () => {
                             }
                         </>)
                     }
-
 
                 </div>
 

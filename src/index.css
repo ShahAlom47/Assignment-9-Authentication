@@ -13,3 +13,6 @@
     transform: scale(0.96);
     
 }
+.animate__animated.animate__fadeInRight {
+    --animate-duration: 2s;
+  }
