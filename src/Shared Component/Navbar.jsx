@@ -13,7 +13,7 @@ const Navbar = () => {
     const navi = <>
         <NavLink to={'/'}><li><a>Home</a></li></NavLink>
         <NavLink><li><a>My Booking</a></li></NavLink>
-        <NavLink to={'/'} ><li><a>Bookmarks</a></li></NavLink>
+        <NavLink to={'/bookmark'} ><li><a>Bookmarks</a></li></NavLink>
         {user && <NavLink to={'/userProfile'}><li><a>Update Profile</a></li></NavLink>}
     </>
 

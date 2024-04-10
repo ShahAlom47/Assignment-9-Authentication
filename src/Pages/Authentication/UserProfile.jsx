@@ -2,7 +2,6 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../Auth Provider/AuthProvider";
 import Navbar from "../../Shared Component/Navbar";
 import { IoCameraReverseOutline } from "react-icons/io5";
-import { update } from "firebase/database";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';

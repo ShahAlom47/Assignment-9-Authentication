@@ -59,10 +59,10 @@ const AuthProvider = ({children}) => {
             setLoading(false);
         });
         return () => unSubscribe
-    }, [])
+    }, [loading])
 
 
-    const AuthInfo={user,userLogin, userRegister, userLogOut, updateUserProfile,updateUserName, githubLogin,googleLogin}
+    const AuthInfo={user,userLogin, userRegister, userLogOut, updateUserProfile,updateUserName, githubLogin,googleLogin,loading}
 
 
     return (
