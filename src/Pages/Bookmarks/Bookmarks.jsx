@@ -5,7 +5,11 @@ import Navbar from '../../Shared Component/Navbar';
 import { MdOutlineAreaChart, MdOutlineDelete } from 'react-icons/md';
 import { CiLocationOn } from 'react-icons/ci';
 import 'animate.css';
-import { Helmet} from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
+
+
+
+
 
 const Bookmarks = () => {
 
@@ -70,6 +74,11 @@ const Bookmarks = () => {
                 </div>
 
 
+            </div>
+
+            <div>
+
+   
             </div>
         </div>
     );
