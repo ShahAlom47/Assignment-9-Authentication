@@ -8,7 +8,7 @@ export default function ErrorPage() {
   console.error(error);
 
   return (
-    <div id="error-page" className=" my-10 flex flex-col justify-center">
+    <div id="error-page" className=" my-10 flex flex-col justify-center mt-14">
       <Helmet>
         <title>Dream House/error</title>
       </Helmet>

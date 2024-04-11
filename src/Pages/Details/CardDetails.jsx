@@ -70,7 +70,7 @@ const CardDetails = () => {
                 <title>Dream House/details</title>
             </Helmet>
 
-            <div className=' md:w-10/12 lg:w-8/12 m-auto my-9  '>
+            <div className=' md:w-10/12 lg:w-8/12 m-auto my-9 mt-14  '>
 
                 <div className="card  bg-base-100 shadow-xl">
                     <figure className="px-10 lg:pt-10 w-full">

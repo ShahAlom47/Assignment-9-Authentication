@@ -8,7 +8,7 @@ import UserProfile from "../Pages/Authentication/UserProfile";
 import CardDetails from "../Pages/Details/CardDetails";
 import ErrorPage from "../Pages/Error page/ErrorPage";
 import Bookmarks from "../Pages/Bookmarks/Bookmarks";
-import Map from "../Shared Component/Map";
+
 
 const router = createBrowserRouter([
     {
@@ -40,10 +40,7 @@ const router = createBrowserRouter([
           path: "/bookmark",
           element: <PrivetRoute> <Bookmarks></Bookmarks></PrivetRoute>,
         },
-        {
-          path: "/map",
-          element: <Map></Map>,
-        },
+       
       ],
     },
   ]);

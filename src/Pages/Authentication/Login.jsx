@@ -123,7 +123,7 @@ const Login = () => {
                 <title>Dream House/Login</title>
             </Helmet>
 
-            <div className=" lg:w-6/12 w-10/12 m-auto border-2 rounded-xl mt-9 p-8">
+            <div className=" lg:w-6/12 w-10/12 m-auto border-2 rounded-xl mt-24 p-8">
 
                 <h1 className="text-xl  font-bold"> Create an account</h1>
 
