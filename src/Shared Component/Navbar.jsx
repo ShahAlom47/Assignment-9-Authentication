@@ -15,6 +15,7 @@ const Navbar = () => {
         <NavLink><li><a>My Booking</a></li></NavLink>
         <NavLink to={'/bookmark'} ><li><a>Bookmarks</a></li></NavLink>
         {user && <NavLink to={'/userProfile'}><li><a>Update Profile</a></li></NavLink>}
+       <li><a href="#footer">Contact Us</a></li>
     </>
 
     const userLogOutHandel = () => {

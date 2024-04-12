@@ -106,7 +106,7 @@ const CardDetails = () => {
                             <div className=' flex items-center gap-3'>
                                 <button onClick={() => bookMarkBtn(cardData?.id)} className=' text-xl flex'> {isBooked ? <FaBookmark /> : <FaRegBookmark />} </button>
 
-                                <button onClick={() => navigate(-1)} className='btn  rounded-md px-6 py-0 font-bold my-5 border-none bg-[#45d143]'> Booking Now  <FaArrowRight /></button>
+                                <button onClick={() => navigate()} className='btn  rounded-md px-6 py-0 font-bold my-5 border-none bg-[#45d143]'> Booking Now  <FaArrowRight /></button>
 
                             </div>
                         </div>

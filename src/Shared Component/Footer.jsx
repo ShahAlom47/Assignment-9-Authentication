@@ -2,13 +2,20 @@ import { IoHomeOutline } from "react-icons/io5";
 
 const Footer = () => {
     return (
-        <footer className="bg-neutral">
+        <footer id="footer" className="bg-neutral">
  <header className="footer p-10 bg-neutral text-neutral-content ">
  <aside>
   <a className="btn btn-ghost font-bold px-0 text-gray-100 text-xl"><IoHomeOutline />Dream <span className="text-[#bcc72a]">House</span></a>
 
     <p>Providing reliable home since 1992.</p>
   </aside> 
+  <div >
+    <h1 className="footer-title">Contuct Us</h1>
+    <p className="">Staten Island, NY 10314, USA</p>
+    <p className="">+123 456 789 11</p>
+    <p className="">dreamhome@gmail.com</p>
+    
+  </div>
   <nav>
     <h6 className="footer-title">Social</h6> 
     <div className="grid grid-flow-col gap-4">

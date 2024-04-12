@@ -2,7 +2,7 @@
 
 const Faq = () => {
 
-    const faqFormhandel = (e) => {
+    const faqFormHandel = (e) => {
         e.preventDefault()
 
     }
@@ -16,7 +16,7 @@ const Faq = () => {
 
             </div>
             <div className="">
-                <form onSubmit={faqFormhandel}>
+                <form onSubmit={faqFormHandel}>
 
                     <div className="p-1 flex  flex-col rounded-md">
                         <input className="p-2 border-t-2 rounded-md" type="name" name="name" id="name" placeholder="Your Name" />
