@@ -24,7 +24,7 @@ const Register = () => {
     const [errorMsg, setErrorMsg] = useState(null)
     const [successMsg, setSuccessMsg] = useState(null)
     const [passError, setPassError] = useState(null)
-    const [showPass, setShowPass] = useState(false)
+    const [showPass, setShowPass] = useState(true)
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -179,7 +179,7 @@ const Register = () => {
                 <p className=' relative -top-3 left-1/2 font-semibold p-1 border-2  border-gray-600 bg-slate-100 rounded-lg inline'>OR</p>
             </div>
 
-            <div className="w-6/12 m-auto px-6 mb-10 flex flex-col gap-3 ">
+            <div className=" md:w-8/12 lg:w-6/12 m-auto px-6 mb-10 flex flex-col gap-3 ">
                 <button onClick={googleLoginHandel} className="btn btn-outline px-2 rounded-full"> <ImGoogle className=" text-red-500  w-6 h-6" /> Continue With Google </button>
                 <button onClick={githubLoginHandel} className="btn btn-outline px-2 rounded-full"> <IoLogoGithub className="  w-8 h-8" /> Continue With Google </button>
             </div>

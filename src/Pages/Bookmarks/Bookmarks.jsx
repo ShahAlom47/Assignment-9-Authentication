@@ -46,7 +46,7 @@ const Bookmarks = () => {
             <Helmet>
                 <title>Dream House/bookmark</title>
             </Helmet>
-            <div className=' mt-14'>
+            <div className=' mt-20'>
                 <h1 className=" text-2xl font-bold text-center px-6 py-2 my-8  border-b-2"> Bookmark List  </h1>
 
                 <div className='border-2 rounded-md p-5 my-4 space-y-3'>

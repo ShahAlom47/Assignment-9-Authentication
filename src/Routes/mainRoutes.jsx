@@ -8,6 +8,9 @@ import UserProfile from "../Pages/Authentication/UserProfile";
 import CardDetails from "../Pages/Details/CardDetails";
 import ErrorPage from "../Pages/Error page/ErrorPage";
 import Bookmarks from "../Pages/Bookmarks/Bookmarks";
+import BookingList from "../Pages/Booking/BookingList";
+import Booking from "../Pages/Booking/Booking";
+
 
 
 
@@ -40,6 +43,14 @@ const router = createBrowserRouter([
         {
           path: "/bookmark",
           element: <PrivetRoute> <Bookmarks></Bookmarks></PrivetRoute>,
+        },
+        {
+          path: "/bookinglist",
+          element: <PrivetRoute><BookingList></BookingList></PrivetRoute>,
+        },
+        {
+          path: "/booking/:id",
+          element: <PrivetRoute><Booking></Booking></PrivetRoute>,
         },
         
        

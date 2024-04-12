@@ -12,8 +12,8 @@ const Navbar = () => {
 
     const navi = <>
         <NavLink to={'/'}><li><a>Home</a></li></NavLink>
-        <NavLink><li><a>My Booking</a></li></NavLink>
         <NavLink to={'/bookmark'} ><li><a>Bookmarks</a></li></NavLink>
+        <NavLink to={'/bookinglist'}><li><a>My Booking</a></li></NavLink>
         {user && <NavLink to={'/userProfile'}><li><a>Update Profile</a></li></NavLink>}
        <li><a href="#footer">Contact Us</a></li>
     </>
@@ -47,7 +47,7 @@ const Navbar = () => {
         window.removeEventListener('scroll', handleScroll);
       };
     }, [visible]);
-    console.log(visible)
+   
 
     return (
         <div className={`className=" max-w-7xl w-full m-auto" p-0 z-50 fixed  ${visible ? 'top-0 transition-all' : '-top-20 transition-all'} duration-1000`} >

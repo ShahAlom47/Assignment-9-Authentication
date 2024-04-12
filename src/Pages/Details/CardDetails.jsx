@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from 'react';
 import Navbar from '../../Shared Component/Navbar';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import { FaArrowLeft, FaArrowRight, FaBookmark, FaRegBookmark } from 'react-icons/fa6';
 import { MdOutlineAreaChart } from 'react-icons/md';
@@ -33,9 +33,7 @@ const CardDetails = () => {
     useEffect(() => {
 
         const localData = localStorage.getItem('bookMark') ? JSON.parse(localStorage.getItem('bookMark')) : [];
-
         const bookMData = localData.some(item => item.id === IntId);
-        console.log(bookMData);
         isBooked ? setBooked(true) : setBooked(false);
 
     }, [id])
@@ -45,6 +43,7 @@ const CardDetails = () => {
         const xx = localStorage.getItem('bookMark')
         const localData = xx ? JSON.parse(localStorage.getItem('bookMark')) : [];
         const bookMData = localData.some(item => item === id);
+        console.log(localData);
 
         if (bookMData) {
             const updateData = localData.filter(item => item.id !== id)
@@ -59,6 +58,8 @@ const CardDetails = () => {
             setBooked(true);
         }
     }
+  
+
 
     // local Storage end 
 
@@ -106,8 +107,7 @@ const CardDetails = () => {
                             <div className=' flex items-center gap-3'>
                                 <button onClick={() => bookMarkBtn(cardData?.id)} className=' text-xl flex'> {isBooked ? <FaBookmark /> : <FaRegBookmark />} </button>
 
-                                <button onClick={() => navigate()} className='btn  rounded-md px-6 py-0 font-bold my-5 border-none bg-[#45d143]'> Booking Now  <FaArrowRight /></button>
-
+                                    <Link to={`/booking/${cardData?.id}`}><button className='btn  rounded-md px-6 py-0 font-bold my-5 border-none bg-[#45d143]'> Booking Now  <FaArrowRight /></button>  </Link>
                             </div>
                         </div>
                     </div>
