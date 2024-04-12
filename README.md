@@ -5,7 +5,7 @@ You can access the website [here](https://www.example.com).
 
 ## Description
 
-The Dream Home website is a platform dedicated to residential real estate, facilitating the listing of houses for sale and rent. It is built using JavaScript and React JS for frontend development, with Tailwind CSS used for styling and the Daisy UI plugin for additional Tailwind components. Additional packages such as React Icons, AOS, Swiper, Animate.css, React-Toastify, and Firebase are utilized to enhance user experience and authentication features.
+The Dream Home website is a platform dedicated to residential real estate, facilitating the listing of houses for sale and rent. It is built using JavaScript and React JS for frontend development, with Tailwind CSS used for styling and the Daisy UI plugin for additional Tailwind components. Additional packages such as React Icons, Swiper, Animate.css, React-Toastify, and Firebase are utilized to enhance user experience and authentication features.
 
 ## Features
 
@@ -28,7 +28,6 @@ The Dream Home website is a platform dedicated to residential real estate, facil
 - **React JS:** Employed for frontend development.
 - **Tailwind CSS:** Used for styling, along with the Tailwind plugin Daisy UI.
 - **React Icons:** Utilized for all icons.
-- **AOS:** Implemented for smooth animations in the navbar and estate cards.
 - **Swiper:** Used for image slides on the homepage banner.
 - **Animate.css:** Utilized for text animation above the slides.
 - **React-Toastify:** Employed for displaying success or error messages on authentication pages.

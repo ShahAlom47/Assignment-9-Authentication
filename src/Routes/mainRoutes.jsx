@@ -8,7 +8,7 @@ import UserProfile from "../Pages/Authentication/UserProfile";
 import CardDetails from "../Pages/Details/CardDetails";
 import ErrorPage from "../Pages/Error page/ErrorPage";
 import Bookmarks from "../Pages/Bookmarks/Bookmarks";
-import Footer from "../Shared Component/Footer";
+
 
 
 const router = createBrowserRouter([
