@@ -9,7 +9,7 @@ const Faq = () => {
 
 
     return (
-        <div className="grid grid-cols-2 w-10/12 m-auto bg-[#8a9043] text-white  my-8 rounded-xl p-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 w-10/12 m-auto bg-[#8a9043] text-white  my-8 rounded-xl p-6">
             <div className=" pr-5">
                 <h1 className="text-5xl mb-5 font-bold  ">Do you have any questions?</h1>
                 <p className="text-lg text-gray-200">Have questions about real estate? Get in touch with our team for expert guidance and answers tailored to your needs. Contact us today!</p>

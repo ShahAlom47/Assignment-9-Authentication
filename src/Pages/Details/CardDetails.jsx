@@ -7,6 +7,7 @@ import { FaArrowLeft, FaArrowRight, FaBookmark, FaRegBookmark } from 'react-icon
 import { MdOutlineAreaChart } from 'react-icons/md';
 import { CiLocationOn } from 'react-icons/ci';
 import { Helmet } from 'react-helmet-async';
+import { ToastContainer, toast } from 'react-toastify';
 // import { getLocalData } from '../../Utility  file/utility';
 
 const CardDetails = () => {
@@ -35,7 +36,7 @@ const CardDetails = () => {
         const localData = localStorage.getItem('bookMark') ? JSON.parse(localStorage.getItem('bookMark')) : [];
         const bookMData = localData.some(item => item.id === IntId);
         isBooked ? setBooked(true) : setBooked(false);
-
+        console.log(bookMData);
     }, [id])
 
 
@@ -50,12 +51,14 @@ const CardDetails = () => {
             localStorage.setItem('bookMark', JSON.stringify(updateData))
 
             setBooked(false);
+            toast.info('Already Bookmarked')
 
         }
         else {
             localData.push(id)
             localStorage.setItem('bookMark', JSON.stringify(localData));
             setBooked(true);
+            toast.success('Bookmarked  successfully ')
         }
     }
   
@@ -71,7 +74,7 @@ const CardDetails = () => {
                 <title>Dream House/details</title>
             </Helmet>
 
-            <div className=' md:w-10/12 lg:w-8/12 m-auto my-9 mt-14  '>
+            <div className=' md:w-10/12 lg:w-8/12 m-auto my-9 mt-20  '>
 
                 <div className="card  bg-base-100 shadow-xl">
                     <figure className="px-10 lg:pt-10 w-full">
@@ -113,7 +116,7 @@ const CardDetails = () => {
                     </div>
                 </div>
             </div>
-
+            <ToastContainer />
         </div>
     );
 };

@@ -1,7 +1,7 @@
 # Dream Home Website
 ## Website URL
 
-You can access the website [here](https://www.example.com).
+You can access the website [here](https://assignment-9-authenticat-e78ed.web.app/).
 
 ## Description
 
@@ -31,3 +31,4 @@ The Dream Home website is a platform dedicated to residential real estate, facil
 - **Swiper:** Used for image slides on the homepage banner.
 - **Animate.css:** Utilized for text animation above the slides.
 - **React-Toastify:** Employed for displaying success or error messages on authentication pages.
+- **React-Hock-Form:** Used for property booking forms .
