@@ -22,9 +22,9 @@ const Navbar = () => {
         userLogOut()
             .then()
             .catch()
-
     }
 
+   
 
 
     const [visible, setVisible] = useState(true);

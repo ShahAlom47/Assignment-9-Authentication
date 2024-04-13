@@ -8,7 +8,7 @@ import { useLocation } from 'react-router-dom';
 const PrivetRoute = ({children}) => {
 const {user,loading } = useContext(AuthContext);
 const location = useLocation();
-console.log(location.pathname);
+
 
 if(loading){
     return <div className=" flex justify-center p-48"> <span className="loading loading-spinner  w-40 h-40 "></span> </div>

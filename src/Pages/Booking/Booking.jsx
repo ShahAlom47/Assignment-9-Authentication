@@ -1,12 +1,11 @@
 import { Helmet } from "react-helmet";
 import Navbar from "../../Shared Component/Navbar";
-
-
 import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
-import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+
+import { ToastContainer, toast } from "react-toastify";
 
 const validationSchema = yup
     .object({
@@ -26,7 +25,7 @@ const Booking = () => {
     const { id } = useParams();
     const IntId = parseInt(id)
     const navigate =useNavigate()
-    const [buyerInfo,setByerInfo]=useState({})
+  
 
 
     const { register, handleSubmit, formState: { errors }, } = useForm({
@@ -39,33 +38,31 @@ const Booking = () => {
         }
     })
 
-    const onSubmit = (data) =>{ 
-        
-        setByerInfo({...data,id:IntId})
-        bookingBtn(id)
+    const onSubmit = (data) =>{   
+        bookingBtn(id,{...data,id:IntId})
     }
 
-  
-console.log(buyerInfo);
 
-const bookingBtn = (id) => {
+const bookingBtn = (id,buyerInfo) => {
+const idInt=parseInt(id)
 
-    console.log(id);
     const xx = localStorage.getItem('booking')
     const localBookingData = xx ? JSON.parse(localStorage.getItem('booking')) : [];
-    const bookingData = localBookingData.some(item => item.id === id);
-    // console.log(bookingData);
+    const bookingData = localBookingData.some(item => item.id === idInt);
+   
+  
 
     if (bookingData) {
         const updateData = localBookingData.filter(item => item.id !== id)
         localStorage.setItem('booking', JSON.stringify(updateData))    
-        alert('alrady  bokking')
+        toast.error('Already Booked')
 
     }
     else {
         localBookingData.push(buyerInfo)
         localStorage.setItem('booking', JSON.stringify(localBookingData));
-        alert('added bokking')
+        toast.success('Booking successfully Completed ')
+        setTimeout(() => { navigate('/bookinglist') }, 1000)
        
     }
 }
@@ -133,21 +130,22 @@ const bookingBtn = (id) => {
                     </div>
 
 
-                    <div className="p-4 flex  flex-col">
+                    <div className="py-4 flex  flex-col">
                         <p className="text-red-400"> </p>
                         <p className="text-green-400"> </p>
                         <input className="btn bg-[#bcc72a] rounded-sm w-full font-bold mt-3" type="submit" value="Submit" />
-                        <button onClick={()=>navigate(-1)} className="btn bg-[#b4a992] rounded-sm w-full font-bold mt-3"> Cancel </button>
                     </div>
 
 
                 </form>
+                <button onClick={()=>navigate(-1)} className="btn  bg-[#b4a992] rounded-sm w-full font-bold "> Cancel </button>
 
 
 
 
 
 
+                <ToastContainer />
             </div>
 
 
