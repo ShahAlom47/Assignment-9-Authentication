@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet";
 import Navbar from "../../Shared Component/Navbar";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { MdOutlineAreaChart, MdOutlineDelete } from "react-icons/md";
+import { MdOutlineAreaChart } from "react-icons/md";
 import { CiLocationOn } from "react-icons/ci";
 
 

@@ -13,7 +13,7 @@ const Navbar = () => {
     const navi = <>
         <NavLink to={'/'}><li><a>Home</a></li></NavLink>
         <NavLink to={'/bookmark'} ><li><a>Bookmarks</a></li></NavLink>
-        <NavLink to={'/bookinglist'}><li><a>My Booking</a></li></NavLink>
+        {user && <NavLink to={'/bookinglist'}><li><a>My Booking</a></li></NavLink>}
         {user && <NavLink to={'/userProfile'}><li><a>Update Profile</a></li></NavLink>}
        <li><a href="#footer">Contact Us</a></li>
     </>
@@ -50,9 +50,9 @@ const Navbar = () => {
    
 
     return (
-        <div className={`className=" max-w-7xl w-full m-auto" p-0 z-50 fixed  ${visible ? 'top-0 transition-all' : '-top-20 transition-all'} duration-1000`} >
+        <div className={`className=" max-w-7xl w-full m-auto" p-0  z-50 fixed  ${visible ? 'top-0 transition-all' : '-top-20 transition-all'} duration-1000`} >
       
-        <div className='navbar  bg-[#18171760] bb-[#ffffff60]  '>
+        <div className='navbar  bg-[#18171760] bb-[#ffffff60] lg:px-10 md:px-10 '>
 
      
 
@@ -78,7 +78,8 @@ const Navbar = () => {
 
 
                 {
-                    user ? <div title={user.displayName} className="dropdown dropdown-end">
+                    user ?<div className="flex items-center">
+                         <div title={user.displayName} className="dropdown dropdown-end">
                         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                             <div className="w-10 rounded-full ">
                                 {
@@ -97,6 +98,9 @@ const Navbar = () => {
                             <li><a>Settings</a></li>
                             <li onClick={userLogOutHandel} ><a>Logout</a></li>
                         </ul>
+
+                    </div>
+                    <Link ><button onClick={userLogOutHandel} className="btn btn-sm rounded-sm ml-3 bg-[#bcc72a] border-none ">LogOut</button></Link>
 
                     </div> : <>
                         <Link to={'/login'}><button className="btn btn-sm rounded-sm ml-3 bg-[#bcc72a] border-none ">Login</button></Link>
