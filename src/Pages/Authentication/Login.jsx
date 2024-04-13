@@ -68,16 +68,10 @@ const Login = () => {
 
         userLogin(email, password)
             .then(() => {
-                updateProfile(auth.currentUser, {
-                    displayName: name, photoURL: ""
-                }).then(() => { })
-                    .catch((error) => {
-                        const errorMessage = error.message;
-                        setErrorMsg(errorMessage)
-                    });
+              
 
-                toast.success('User created successfully ')
-                setSuccessMsg('User created successfully')
+                toast.success('Login successfully ')
+                setSuccessMsg('Login successfully')
                 setTimeout(() => { navigate(location.state ? location.state : '/') }, 1500)
 
             })

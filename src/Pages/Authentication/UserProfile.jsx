@@ -89,7 +89,7 @@ const UserProfile = () => {
             });
     }
 
-
+console.log(user)
 
     return (
         <div>

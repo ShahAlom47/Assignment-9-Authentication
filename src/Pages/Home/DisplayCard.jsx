@@ -10,7 +10,7 @@ const DisplayCard = ({data}) => {
     const {id, image, estate_title, area,location}=data;
 
     return (
-        <div className="card card-compact  bg-base-100 shadow-xl shadow-[#bcc72a]  border-2 animate__animated animate__flipInY"  >
+        <div className="card card-compact  bg-base-100 rounded-lg shadow-lg shadow-[#bcc72a]  border-2 animate__animated animate__flipInY"  >
         <figure><img src={image} alt="Shoes" /></figure>
         <div className="card-body">
           <h2 className="card-title">{estate_title}</h2>
