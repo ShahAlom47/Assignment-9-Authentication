@@ -100,10 +100,10 @@ console.log(user)
             <div>
 
                 <h1 className=" text-2xl text-center py-4 border-b-2 mt-24 ">Your Profile</h1>
-                <div className="lg:w-6/12 m-auto border-4 my-5 p-4 rounded-md">
+                <div className="lg:w-6/12 m-auto border-4 my-5 pt-3 rounded-md">
                     <div className=" flex justify-center pb-5">
                         <div className=" flex items-end  relative">
-                            <div className="w-16 rounded-full   ">
+                            <div className="w-20 rounded-full   ">
                                 {
 
                                     user.photoURL ? <img className=" rounded-full" alt='null' src={user.photoURL} /> : <FaRegCircleUser className="w-full h-full rounded-full text-gray-300"></FaRegCircleUser>
@@ -116,13 +116,13 @@ console.log(user)
                                     setPhotoBtn(true)
                                 }}
                                 title="Change Profile "
-                                className=" flex absolute left-8  bg-white rounded-full p-1">
+                                className=" flex absolute left-12  bg-white rounded-full p-1">
                                 <IoCameraReverseOutline />
                             </button>
                         </div>
                     </div>
-                    <div className="rounded-md bg-slate-300">
-                        <div className=" flex justify-between border-b-2 p-3 rounded-md bg-slate-300">
+                    <div className="rounded-md bg-slate-100">
+                        <div className=" flex justify-between border-b-2 p-3 rounded-md bg-slate-100">
                             <h1 className="text-lg font-semibold "> Name: {user.displayName} </h1>
                             <button
                                 onClick={() => {
