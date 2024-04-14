@@ -95,7 +95,8 @@ const Register = () => {
     const googleLoginHandel = () => {
         googleLogin()
             .then(() => {
-                navigate(location.state ? location.state : '/')
+                toast.success('Register successfully ')
+                setTimeout(() => { navigate(location.state ? location.state : '/') }, 1500)
             })
             .catch((error) => {
                 const errorMessage = error.message;
@@ -107,7 +108,8 @@ const Register = () => {
     const githubLoginHandel = () => {
         githubLogin()
             .then(() => {
-                navigate(location.state ? location.state : '/')
+                toast.success('Register successfully ')
+                setTimeout(() => { navigate(location.state ? location.state : '/') }, 1500)
             })
             .catch((error) => {
                 const errorMessage = error.message;

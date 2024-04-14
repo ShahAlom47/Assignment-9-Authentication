@@ -89,7 +89,9 @@ const Login = () => {
     const googleLoginHandel = () => {
         googleLogin()
             .then(() => {
-                navigate(location.state ? location.state : '/')
+                toast.success('Login successfully ')
+             
+                setTimeout(() => { navigate(location.state ? location.state : '/') }, 1500)
             })
             .catch((error) => {
                 const errorMessage = error.message;
@@ -101,7 +103,8 @@ const Login = () => {
     const githubLoginHandel = () => {
         githubLogin()
             .then(() => {
-                navigate(location.state ? location.state : '/')
+                toast.success('Login successfully ')
+                setTimeout(() => { navigate(location.state ? location.state : '/') }, 1500)
             })
             .catch((error) => {
                 const errorMessage = error.message;

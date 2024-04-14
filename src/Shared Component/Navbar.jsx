@@ -65,7 +65,7 @@ const Navbar = () => {
                         {navi}
                     </ul>
                 </div>
-                <Link to={'/'}>  <button className="flex items-center pl-0 font-bold text-gray-100 text-xl md:text-2xl lg:text-2xl"><IoHomeOutline />Dream <span className="text-[#bcc72a]">House</span></button> </Link>
+                <Link to={'/'}>  <button  className="flex items-center pl-0 font-bold text-gray-100 text-xl md:text-2xl lg:text-2xl" ><IoHomeOutline />Dream <span className="text-[#bcc72a]">House</span></button> </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 font-semibold text-gray-100">

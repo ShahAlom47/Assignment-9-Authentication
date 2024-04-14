@@ -28,6 +28,7 @@ The Dream Home website is a platform dedicated to residential real estate, facil
 - **React JS:** Employed for frontend development.
 - **Tailwind CSS:** Used for styling, along with the Tailwind plugin Daisy UI.
 - **React Icons:** Utilized for all icons.
+- **AOS Animation:** Used for smooth scrolling experience  .
 - **Swiper:** Used for image slides on the homepage banner.
 - **Animate.css:** Utilized for text animation above the slides.
 - **React-Toastify:** Employed for displaying success or error messages on authentication pages.
