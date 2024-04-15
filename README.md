@@ -13,7 +13,7 @@ The Dream Home website is a platform dedicated to residential real estate, facil
 - **Smooth User Experience:** Animations in the navbar and estate cards enhance the user experience.
 - **Image Slides:** The homepage features a banner with image slides showcasing properties.
 - **Authentication:** Firebase is used for authentication, providing features like user sign-in and error message display using React-Toastify.
-
+- **Bookmark Properties:** Users can bookmark properties they are interested in, allowing them to easily access them later. The bookmarked properties are stored locally using browser's local storage, ensuring quick access and persistence even after closing the browser window.
 
 
 ## Usage
@@ -33,3 +33,4 @@ The Dream Home website is a platform dedicated to residential real estate, facil
 - **Animate.css:** Utilized for text animation above the slides.
 - **React-Toastify:** Employed for displaying success or error messages on authentication pages.
 - **React-Hock-Form:** Used for property booking forms .
+
